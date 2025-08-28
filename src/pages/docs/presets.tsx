@@ -4,7 +4,7 @@ import CodeBlock from '@/components/CodeBlock'
 
 export default function Presets() {
   const extendExample = `{
-  "extends": "@hugsylabs/hugsy-compiler/presets/security"
+  "extends": "@hugsylabs/hugsy-compiler/presets/strict"
 }`;
 
   const multiplePresetsExample = `{
@@ -15,7 +15,7 @@ export default function Presets() {
 }`;
 
   const overrideExample = `{
-  "extends": "@hugsylabs/hugsy-compiler/presets/security",
+  "extends": "@hugsylabs/hugsy-compiler/presets/strict",
   "permissions": {
     "allow": [
       "Write(**/*.test.js)",
@@ -63,8 +63,8 @@ export default function Presets() {
       }
     ]
   },
-  "slashCommands": {
-    "presets": ["@hugsy/slash-commands-common"],
+  "commands": {
+    "presets": ["@hugsylabs/hugsy-compiler/presets/slash-commands-common"],
     "commands": {
       "build": {
         "description": "Build the frontend application",
@@ -97,30 +97,30 @@ export default function Presets() {
           <h3 className="text-xl font-bold">Available Built-in Presets</h3>
           <div className="space-y-3">
             <div className="bg-white dark:bg-dark-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
-              <h4 className="font-semibold">@hugsylabs/hugsy-compiler/presets/default</h4>
+              <h4 className="font-semibold">@hugsylabs/hugsy-compiler/presets/development</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Balanced configuration for general development with common tools and reasonable restrictions
+                Full-featured development environment with permissive settings
               </p>
             </div>
             
             <div className="bg-white dark:bg-dark-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
-              <h4 className="font-semibold">@hugsylabs/hugsy-compiler/presets/development</h4>
+              <h4 className="font-semibold">@hugsylabs/hugsy-compiler/presets/recommended</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Permissive configuration for active development with minimal restrictions
+                Balanced configuration for most projects with reasonable defaults
               </p>
             </div>
 
             <div className="bg-white dark:bg-dark-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
-              <h4 className="font-semibold">@hugsylabs/hugsy-compiler/presets/security</h4>
+              <h4 className="font-semibold">@hugsylabs/hugsy-compiler/presets/strict</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Restrictive configuration with enhanced security for production environments
+                Maximum security and restrictions for sensitive environments
               </p>
             </div>
 
             <div className="bg-white dark:bg-dark-900 rounded-lg p-4 border border-gray-200 dark:border-gray-800">
-              <h4 className="font-semibold">@hugsylabs/hugsy-compiler/presets/minimal</h4>
+              <h4 className="font-semibold">@hugsylabs/hugsy-compiler/presets/showcase</h4>
               <p className="text-sm text-gray-600 dark:text-gray-400">
-                Minimal configuration with only essential permissions
+                Demonstrates all capabilities and features of Hugsy
               </p>
             </div>
           </div>

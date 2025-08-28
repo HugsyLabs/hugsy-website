@@ -85,8 +85,8 @@ export default function Home() {
               </h1>
               
               <p className="text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-3xl mx-auto">
-                A powerful CLI tool that extends Claude Code with plugins, team configurations, 
-                and a thriving ecosystem of community-built presets.
+                The ultimate configuration management system for Claude Code. Transform your AI coding agents 
+                into a team-aligned powerhouse with plugins, presets, and slash commands.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

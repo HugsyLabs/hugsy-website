@@ -41,10 +41,10 @@ const myPlugin = {
 export default myPlugin;`;
 
   const usageExample = `{
-  "extends": "@hugsylabs/hugsy-compiler/presets/default",
+  "extends": "@hugsylabs/hugsy-compiler/presets/development",
   "plugins": [
     "./plugins/my-custom-plugin.js",
-    "@hugsylabs/plugin-prettier"
+    "./plugins/auto-format.js"
   ]
 }`;
 
@@ -138,8 +138,8 @@ config.env.API_URL = 'https://api.example.com';`}
               </p>
               <CodeBlock 
                 language="javascript" 
-                code={`config.slashCommands = config.slashCommands || {};
-config.slashCommands.presets = ['@hugsy/slash-commands-common'];`} 
+                code={`config.commands = config.commands || {};
+config.commands.presets = ['@hugsylabs/hugsy-compiler/presets/slash-commands-common'];`} 
               />
             </div>
           </div>

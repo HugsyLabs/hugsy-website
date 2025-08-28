@@ -70,8 +70,8 @@ export default function QuickStart() {
               "env": {
                 "NODE_ENV": "development"
               },
-              "slashCommands": {
-                "presets": ["@hugsy/slash-commands-common"]
+              "commands": {
+                "presets": ["@hugsylabs/hugsy-compiler/presets/slash-commands-common"]
               }
             }, null, 2)}
           />
