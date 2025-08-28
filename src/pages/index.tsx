@@ -226,7 +226,7 @@ export default function Home() {
               </div>
             </div>
             <div className="mt-8 text-center text-sm text-gray-500">
-              © {new Date().getFullYear()} HugsyLab. All rights reserved.
+              © {new Date().getFullYear()} HugsyLabs. All rights reserved.
             </div>
           </div>
         </footer>
