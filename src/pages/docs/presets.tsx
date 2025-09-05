@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import DocsLayout from '@/components/DocsLayout'
+import SidebarLayout from '@/components/SidebarLayout'
 import CodeBlock from '@/components/CodeBlock'
 
 export default function Presets() {
@@ -79,7 +79,7 @@ export default function Presets() {
       <Head>
         <title>Presets - Hugsy Documentation</title>
       </Head>
-      <DocsLayout title="Presets">
+      <SidebarLayout title="Presets">
         <div className="space-y-6">
           <p className="text-lg text-gray-600 dark:text-gray-400">
             Presets are pre-configured Hugsy configurations that you can extend and customize. 
@@ -205,7 +205,7 @@ export default function Presets() {
             </ul>
           </div>
         </div>
-      </DocsLayout>
+      </SidebarLayout>
     </>
   )
 }

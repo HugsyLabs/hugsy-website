@@ -54,8 +54,11 @@ export default function Home() {
               <span className="font-bold text-xl">Hugsy</span>
             </div>
             <div className="flex items-center space-x-8">
+              <Link href="/marketplace" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition">
+                Marketplace
+              </Link>
               <Link href="/docs" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition">
-                Docs
+                Documentation
               </Link>
               <Link href="/docs/quick-start" className="text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white transition">
                 Quick Start

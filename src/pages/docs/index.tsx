@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import DocsLayout from '@/components/DocsLayout'
+import SidebarLayout from '@/components/SidebarLayout'
 
 export default function DocsIndex() {
   return (
@@ -8,7 +8,7 @@ export default function DocsIndex() {
       <Head>
         <title>Documentation - Hugsy</title>
       </Head>
-      <DocsLayout title="Welcome to Hugsy">
+      <SidebarLayout title="Welcome to Hugsy">
         <div className="space-y-6">
           <p className="text-lg text-gray-600 dark:text-gray-400">Hugsy is a powerful CLI tool designed to enhance your Claude Code experience through plugins, team configurations, and a thriving ecosystem of community-built presets.</p>
 
@@ -54,7 +54,7 @@ export default function DocsIndex() {
             </Link>
           </div>
         </div>
-      </DocsLayout>
+      </SidebarLayout>
     </>
   )
 }
