@@ -29,16 +29,16 @@ export default function SubagentsList({ onSelectPackage }: SubagentsListProps) {
   const loadSubagents = async () => {
     setLoading(true);
     try {
-      // Search for subagent packages  
-      const response = await fetch('https://registry.npmjs.org/-/v1/search?text=subagent%20OR%20sub-agent&size=50');
+      // Search for all subagent packages
+      const response = await fetch('https://registry.npmjs.org/-/v1/search?text=subagent&size=50');
       const data = await response.json();
       
       const foundSubagents: DiscoveredPackage[] = [];
       
       for (const obj of data.objects || []) {
         const pkg = obj.package;
-        // Filter for packages that are actually subagents
-        if (pkg.name.includes('subagent') || pkg.name.includes('sub-agent')) {
+        // Only include @hugsylabs subagent packages
+        if (pkg.name.startsWith('@hugsylabs/') && pkg.name.includes('subagent')) {
           foundSubagents.push({
             name: pkg.name,
             description: pkg.description || 'AI-powered autonomous agent for specialized tasks',
@@ -48,9 +48,9 @@ export default function SubagentsList({ onSelectPackage }: SubagentsListProps) {
         }
       }
       
-      // If we have too many results, limit to first 8
-      if (foundSubagents.length > 8) {
-        foundSubagents.splice(8);
+      // Limit to first 12 results
+      if (foundSubagents.length > 12) {
+        foundSubagents.splice(12);
       }
       
       setSubagents(foundSubagents);
