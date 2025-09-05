@@ -53,36 +53,6 @@ export default function SubagentsList({ onSelectPackage }: SubagentsListProps) {
         foundSubagents.splice(8);
       }
       
-      // Add some example subagents if none found
-      if (foundSubagents.length === 0) {
-        foundSubagents.push(
-          {
-            name: '@hugsylabs/subagent-coder',
-            description: 'Autonomous coding agent that can write, refactor, and debug code',
-            version: '0.1.0',
-            type: 'subagent' as any
-          },
-          {
-            name: '@hugsylabs/subagent-researcher',
-            description: 'Research agent for gathering information and analyzing data',
-            version: '0.1.0',
-            type: 'subagent' as any
-          },
-          {
-            name: '@hugsylabs/subagent-tester',
-            description: 'Automated testing agent for unit, integration, and E2E tests',
-            version: '0.1.0',
-            type: 'subagent' as any
-          },
-          {
-            name: '@hugsylabs/subagent-reviewer',
-            description: 'Code review agent that analyzes PRs and suggests improvements',
-            version: '0.1.0',
-            type: 'subagent' as any
-          }
-        );
-      }
-      
       setSubagents(foundSubagents);
     } catch (error) {
       console.error('Error loading subagents:', error);
