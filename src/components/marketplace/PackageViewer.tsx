@@ -43,7 +43,7 @@ import remarkGfm from 'remark-gfm'
 
 interface PackageViewerProps {
   packageName: string
-  packageType: 'preset' | 'plugin' | 'command'
+  packageType: 'preset' | 'plugin' | 'command' | 'subagent'
   onBack: () => void
 }
 
@@ -830,7 +830,7 @@ export default function PackageViewer({ packageName, packageType, onBack }: Pack
               <div className="space-y-2">
                 {(() => {
                   // Get all versions from packageInfo
-                  let versions = []
+                  let versions: string[] = []
                   if (packageInfo?.versions) {
                     versions = Object.keys(packageInfo.versions)
                   } else if (packageInfo?.time) {
