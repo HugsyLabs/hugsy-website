@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import DocsLayout from '@/components/DocsLayout'
+import SidebarLayout from '@/components/SidebarLayout'
 
 export default function Installation() {
   return (
@@ -7,7 +7,7 @@ export default function Installation() {
       <Head>
         <title>Installation - Hugsy Documentation</title>
       </Head>
-      <DocsLayout title="Installation">
+      <SidebarLayout title="Installation">
         <div className="space-y-6">
           <h2 className="text-2xl font-bold">System Requirements</h2>
           <ul className="space-y-2 list-disc list-inside">
@@ -53,7 +53,7 @@ export default function Installation() {
             <span className="text-yellow-400"> --version</span>
           </div>
         </div>
-      </DocsLayout>
+      </SidebarLayout>
     </>
   )
 }

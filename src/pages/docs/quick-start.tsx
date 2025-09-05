@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import DocsLayout from '@/components/DocsLayout'
+import SidebarLayout from '@/components/SidebarLayout'
 import CodeBlock from '@/components/CodeBlock'
 
 export default function QuickStart() {
@@ -9,7 +9,7 @@ export default function QuickStart() {
       <Head>
         <title>Quick Start - Hugsy Documentation</title>
       </Head>
-      <DocsLayout title="Quick Start">
+      <SidebarLayout title="Quick Start">
         <div className="space-y-6">
           <p className="text-lg text-gray-600 dark:text-gray-400">Get up and running with Hugsy in less than 5 minutes.</p>
 
@@ -114,7 +114,7 @@ export default function QuickStart() {
             </div>
           </div>
         </div>
-      </DocsLayout>
+      </SidebarLayout>
     </>
   )
 }

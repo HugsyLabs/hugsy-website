@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import DocsLayout from '@/components/DocsLayout'
+import SidebarLayout from '@/components/SidebarLayout'
 import CodeBlock from '@/components/CodeBlock'
 
 export default function Plugins() {
@@ -53,7 +53,7 @@ export default myPlugin;`;
       <Head>
         <title>Plugins - Hugsy Documentation</title>
       </Head>
-      <DocsLayout title="Plugins">
+      <SidebarLayout title="Plugins">
         <div className="space-y-6">
           <p className="text-lg text-gray-600 dark:text-gray-400">
             Plugins allow you to extend and modify Hugsy configurations dynamically. They can add permissions, 
@@ -167,7 +167,7 @@ config.commands.presets = ['@hugsylabs/hugsy-compiler/presets/slash-commands-com
             </ul>
           </div>
         </div>
-      </DocsLayout>
+      </SidebarLayout>
     </>
   )
 }
